@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="main-section">
+    <div class="internal-container">
+  <!-- Sidebar start -->
+<section class="sidebar">
+  <div class="sidebar-item">
+    <button class="rounded-btn" id="select_one">1</button>
+    <section class="sidebar-sub-item">
+    <span class="main-heading"> Step 1</span>
+    <span class="sub-heading"> Your info</span>
+  </section>
+  </div>
+
+  <div class="sidebar-item" id="nanan">
+    <button class="rounded-btn" id="select_two">2</button>
+    <section class="sidebar-sub-item">
+    <span class="main-heading"> Step 2 </span>
+    <span class="sub-heading"> Select plan</span>
+  </section>
+  </div>
+  <div class="sidebar-item">
+    <button class="rounded-btn" id="select_three">3</button> 
+    <section class="sidebar-sub-item">
+    <span class="main-heading">Step 3</span>
+    <span class="sub-heading">Add-ons</span>
+  </section>
+  </div>
+  <div class="sidebar-item">
+    <button class="rounded-btn"  id="select_four">4</button> 
+    <section class="sidebar-sub-item"> 
+    <span class="main-heading">Step 4</span>
+    <span class="sub-heading">Summary</span>
+  </section>
+  </div>
+  <!-- Sidebar end -->
+</section>
+<div id="main-container">
+<section class="personal-info"  id="info_selection">
+  <!-- Step 1 start -->
+
+    <h1 class="info-heading">Personal info</h1>
+    <p class="info-desc"> Please provide your name, email address, and phone number.</p>
+<section id="info_form" class="personal-info-form">
+  <label for="fullname">Name</label>
+  <input type="text" name="fullname" id="fullname" placeholder="e.g. Stephen King" required>
+
+  <label for="email_address">Email Address</label>
+  <input type="email" name="email" id="email_address" placeholder="e.g. stephenking@lorem.com" required>
+
+  <label for="phone-no">Phone Number</label>
+  <input type="text" name="phone" id="phone_no" placeholder="e.g. +1 234 567 890" required>
+    <button class="next-btn" id="to_step_2">Next Step</button>
+</section>
+
+  <!-- Step 1 end -->
+</section>
+<section id="plan_selection">
+  <!-- Step 2 start -->
+  
+  <h1 class="info-heading">Select your plan</h1>
+  <p class="info-desc">You have the option of monthly or yearly billing.</p>
+
+    <div class="desc-container" id="arcade_sect">
+          <input type="radio" name="selections" id="arcadeSelection" class="arcade-selection" checked>
+          <label for="arcadeSelection" class="arcade">
+          <section class=" arcade-container" id="arcade_sect"> 
+            <img src="assets/images/icon-arcade.svg" alt="arcade">
+            <aside>
+        <span class="main-head">Arcade</span><br><br>
+        <span class="price" id="arcade_price">$9/mo</span>
+      </aside>
+      </section>
+  </label>
+  <input type="radio" name="selections" id="advancedSelection" class="advanced-selection">
+    <label for="advancedSelection" class="advanced">
+  <section >
+    <img src="assets/images/icon-advanced.svg" alt="advanced">
+    <aside>
+  <span class="main-head"> Advanced</span><br><br>
+    <span class="price" id="advanced_price">$12/mo</span>
+  </aside>
+  </section>
+  </label>
+  <input type="radio" name="selections" id="proSelection" class="pro-selection">
+  <label for="proSelection" class="pro">
+  <section>
+    <img src="assets/images/icon-pro.svg" alt="pro"> 
+    <aside>
+   <span class="main-head"> Pro</span><br><br>
+   <span class="price" id="pro_price"> $15/mo</span>
+  </aside>
+  </section>
+</label>
+
+  
+</div>
+  <section class="plan-select">
+    <span> <label for="monthly" class="month-sel check2" id="checksmonth" > Monthly</label><input type="radio" name="plan" id="monthly" value="monthly" checked="true" class="month"></span>
+  <span class="selectors"><label for="monthly" class="monthly-selector check"  id="checkmonth"></label><label for="yearly" class="yearly-selector" id="checkyear"></label></span>
+    <span><input type="radio" name="plan" id="yearly" value="yearly" class="year"><label for="yearly"  id="checksyear">Yearly</label></span> 
+</section>
+
+<section class="btns">
+  <button class="go-back-btn plan-btn"  id="back_step_1">Go Back</button>
+  <button class="next-btn-style plan-btn"  id="to_step_3">Next Step</button>
+</section>
+
+  <!-- Step 2 end -->
+</section>
+<section class="pick-addons" id="addons_selection">
+  <!-- Step 3 start -->
+
+  <h1 class="info-heading">Pick add-ons</h1>
+  <p class="info-desc">Add-ons help enhance your gaming experience.</p>
+
+  <form class="addons-form">
+    <div class="online-service-section">
+      <input type="checkbox" name="online-service" id="onlineService" value="online-service">
+  <section>
+     <span>Online service</span> 
+  <span> Access to multiplayer games</span>
+</section>
+  <span id="online">+$1/mo</span>
+</div>
+<div  class="larger-storage-section">
+  <input type="checkbox" name="online-service" id="storageService" value="online-service">
+  <section>
+     <span>Larger storage </span>
+  <span> Extra 1TB of cloud save </span>
+  </section>
+  <span id="storage"> +$2/mo</span>
+</div>
+<div class="customizable-profile-section">
+  <input type="checkbox" name="online-service" id="customService" value="online-service">
+  <section>
+     <span>Customizable Profile</span>
+  <span> Custom theme on your profile</span>
+  </section>
+  <span id="custom">+$2/mo</span>
+</div>
+</form>
+<section class="addons-btns">
+  <button class="go-back-btn plan-btn"  id="back_step_2">Go Back</button>
+  <button class="next-btn-style plan-btn"  id="to_step_4">Next Step</button>
+</section>
+
+  <!-- Step 3 end -->
+</section>
+<section id="finish_selection">
+  <!-- Step 4 start -->
+
+ <h1 class="info-heading"> Finishing up</h1>
+  <p class="info-desc">Double-check everything looks OK before confirming.</p>
+
+  <!-- Dynamically add subscription and add-on selections here -->
+  <section id="selected-plans" class="selected-plans-section">
+    <aside class="selected-plans" id="planSelected">
+      <article class="split-plans"> <span  class="change-selected" id="planSelectedControl">Arcade Monthly</span>
+      <span id="changeButton" class="change-button">Change</span></article>
+      <span class="money-changer" id="moneyChanger">$9/mo</span>
+    </aside>
+    <div id="addonsSelected" class="addons-carrier">
+    <aside class="selected-addons">
+      <span class="first-part">Online Service</span> <span class="second-part">+$1/mo</span>
+    </aside>
+    <aside  class="selected-addons">
+      <span class="first-part">Larger Storage </span><span class="second-part">+$1/mo</span>
+    </aside>
+  </div>
+  </section>
+  <section class="total-sum"><p id="totalText">Total (per month/year)</p><p class="total-money" id="totalMoney">$12/mo</p></section>
+<section class="addons-btns">
+  <button class="go-back-btn plan-btn"  id="back_step_3">Go Back</button>
+  <button class="next-btn-style plan-btn" id="confirm_selections">Confirm</button>
+</section>
+  <!-- Step 4 end -->
+</section>
+<section class="appreciation" id="pop_up">
+  <!-- Step 5 start -->
+  <img src="./assets/images/icon-thank-you.svg" alt="thanks">
+  <h1 class="info-heading">Thank you!</h1>
+
+  <p class="info-desc">Thanks for confirming your subscription! We hope you have fun 
+  using our platform. If you ever need support, please feel free 
+  to email us at support@loremgaming.com.</p>
+
+  <!-- Step 5 end -->
+</section>
+
+</div>
+</div>
+</main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="index.js">
+  </script>
+</body>
+</html>
